@@ -60,4 +60,4 @@ def req(bot, update, proposal_id):
             "proposal": proposal
         }
     except Proposal.DoesNotExist:
-        log.warn("'%s' doesn't exist but queried", proposal)
+        log.warn("Proposal #%s doesn't exist but queried", proposal_id)
