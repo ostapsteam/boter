@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class BugboardConfig(AppConfig):
-    name = 'bugboard'
+class BoterConfig(AppConfig):
+    name = 'boter'
