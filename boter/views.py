@@ -25,13 +25,13 @@ def dispatch(request, botname):
 @register("^/create_request$", desc="создать заявку")
 @reply_with_tpl("myvortex/create_request.html")
 def create_requests(bot, update):
-    pass
+    return {}
 
 
 @register("^/help$", desc="помощь")
 @reply_with_tpl("myvortex/help.html")
 def help(bot, update):
-    pass
+    return {}
 
 
 @register("^/my_requests$", desc="мои заявки")

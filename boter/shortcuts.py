@@ -15,10 +15,11 @@ def reply_with_tpl(tpl, parse_mode=None):
     def decor(f):
         def wrap(bot, update, *args, **kwargs):
             ctx = f(bot, update, *args, **kwargs)
-            bot.sendMessage(
-                chat_id=update.chat_id,
-                text=render_to_string(tpl, ctx or {}),
-                parse_mode=parse_mode
-            )
+            if ctx is not None:
+                bot.sendMessage(
+                    chat_id=update.chat_id,
+                    text=render_to_string(tpl, ctx),
+                    parse_mode=parse_mode
+                )
         return wrap
     return decor
