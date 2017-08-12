@@ -9,7 +9,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='boter',
-    version='0.5',
+    version='0.6',
     packages=find_packages(),
     include_package_data=True,
     license='BSD License',  # example license
@@ -32,5 +32,5 @@ setup(
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
-    install_requires=['django', 'requests'],
+    install_requires=['Django', 'requests'],
 )
